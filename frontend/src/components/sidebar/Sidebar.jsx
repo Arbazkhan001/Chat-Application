@@ -1,13 +1,21 @@
 import Conversations from "./Conversations";
 import LogoutButton from "./LogoutButton";
+import Settings from "./Settings";
 import SearchInput from "./SearchInput";
+import { useAuthContext } from "../../context/AuthContext";
+
 
 const Sidebar = () => {
+
+	const { authUser } = useAuthContext();
+	const userId = authUser._id
+
 	return (
 		<div className='border-r border-slate-500 p-4 flex flex-col'>
 			<SearchInput />
 			<div className='divider px-3'></div>
 			<Conversations />
+			<Settings userId={userId}/>
 			<LogoutButton />
 		</div>
 	);

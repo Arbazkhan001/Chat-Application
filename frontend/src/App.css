@@ -1,0 +1,17 @@
+.shareicon{
+	background-color: #707070 !important;
+    width: fit-content !important;
+    border: none !important;
+}
+
+.shareicon::after{
+    content: none !important;
+}
+
+.sharecontainer{
+    width: fit-content;
+}
+
+.sharecontainer i{
+    color: red;
+}
